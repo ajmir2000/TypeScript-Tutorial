@@ -38,3 +38,14 @@ function updateTaskStatus(id: number, newStatus: Status): void {
 
 updateTaskStatus(1, Status.Done);
 showTasks();
+
+function deleteTask(id: number): void {
+  const index = tasks.findIndex((t) => t.id === id);
+  if (index !== -1) {
+    tasks.splice(index, 1);
+  } else {
+    console.log(`Task with ID ${id} not found.`);
+  }
+}
+deleteTask(2);
+showTasks();
