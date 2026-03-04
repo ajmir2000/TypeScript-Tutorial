@@ -38,3 +38,23 @@ function greeting(name: string, greeting: string = "Hello"): string {
 }
 console.log(greeting("Ajmir")); // Output: "Hello, Ajmir!"
 console.log(greeting("Ajmir", "Hi")); // Output: "Hi, Ajmir!"
+
+//viod
+function Message(message: string): void {
+  console.log(`This is the Message: ${message}`);
+}
+
+Message("Hello, TypeScript!"); // Output: "This is the Message: Hello, TypeScript!"
+
+// never : nerver type is used to indicate that a function will never return a value. It is typically used for functions that throw an error or have an infinite loop.
+function throwError(message: string): never {
+  throw new Error(message);
+}
+function infiniteLoop(message: string): never {
+  while (true) {
+    // Infinite loop
+    console.log(message);
+  }
+}
+// throwError("This is an error!"); // This will throw an error and stop the execution
+// infiniteLoop("This will run indefinitely!"); // This will run indefinitely and print the message repeatedly  
