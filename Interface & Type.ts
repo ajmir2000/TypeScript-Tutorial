@@ -60,3 +60,66 @@ const value1: NumberArray = [1, 2, 3];
 
 type Person = [string, number];
 const person1: Person = ["Ajmir", 25];
+
+// Interface we can use extends but in type we can use intersection (&) to extend another type.
+
+interface person {
+  name: string;
+  age: number;
+}
+
+interface Employee extends person {
+  employeeId: number;
+  jobTitle: string;
+}
+
+const employee1: Employee = {
+  name: "Ajmir",
+  age: 25,
+  employeeId: 12345,
+  jobTitle: "Software Engineer",
+};
+
+interface Address {
+  street: string;
+  city: string;
+  country: string;
+}
+interface Company {
+  name: string;
+  address: Address;
+}
+
+const company1: Company = {
+  name: "Tech Company",
+  address: {
+    street: "123 Main St",
+    city: "Tech City",
+    country: "Techland",
+  },
+};
+
+type Child = {
+  name: string;
+  age: number;
+};
+type Student = Child & {
+  studentId: number;
+  grade: string;
+};
+const student1: Student = {
+  name: "Ajmir",
+  age: 25,
+  studentId: 67890,
+  grade: "A",
+};
+
+type parent = { name: string; age: number; children: Child };
+const parent1: parent = {
+  name: "John Doe",
+  age: 50,
+  children: {
+    name: "Jane Doe",
+    age: 20,
+  },
+};
