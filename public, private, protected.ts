@@ -36,6 +36,6 @@ class Admin extends User {
 const user1 = new User("Ajmir", "password123", "ajmir@example.com");
 user1.getUserName(); // Output: Name is: Ajmir
 
-user1.updatePassword("newpassword456"); // Error: Property 'updatePassword' is private and only accessible within class 'User'.
+// user1.updatePassword("newpassword456"); // Error: Property 'updatePassword' is private and only accessible within class 'User'.
 
-console.log(user1.getEmail()); // Error: Property 'getEmail' is protected and only accessible within class 'User' and its subclasses.
+// console.log(user1.getEmail()); // Error: Property 'getEmail' is protected and only accessible within class 'User' and its subclasses.
