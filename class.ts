@@ -11,8 +11,9 @@
 //   }
 // }
 
-const person1 = new Person("Ajmir", 20);
-person1.introduce();
+// const person1 = new Person("Ajmir", 20);
+// person1.introduce();
+
 //output: Hi, I'm Ajmir and I'm 20 years old.
 // But have error because of missing type annotations in the constructor parameters. To fix this, we can add type annotations to the constructor parameters like this:
 
